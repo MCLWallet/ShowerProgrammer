@@ -32,7 +32,7 @@ jobs:
           hugo-version: 'latest'
       # Builds the Hugo Blog
       - name: Hugo build
-          run: hugo --minify
+        run: hugo --minify
 
   # This workflow deploys the website to Firebase. Needs the Hugo Build before!
   deploy:
