@@ -22,35 +22,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-      # Setup Hugo
-      - name: Hugo setup
-        uses: peaceiris/actions-hugo@v2.4.9
-        with:
-          hugo-version: 'latest'
-      # Builds the Hugo Blog
-      - name: Hugo build
-        run: hugo --gc --minify --cleanDestinationDir
-
-  # This workflow deploys the website to Firebase. Needs the Hugo Build before!
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      # Checkout Repo
-      - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Download Artifact
-        uses: actions/download-artifact@master
-        with:
-          name: public
-      # Deploys to Firebase
-      - name: GitHub Action for Firebase
-        uses: w9jds/firebase-action@v1.3.0
-        with:
-          args: deploy --only hosting
+      # Fetch Hugo to Firebase docker image
+      - uses: wajahatkarim3/Hugo-On-Fire@master
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
