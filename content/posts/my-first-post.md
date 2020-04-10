@@ -1,12 +1,12 @@
 +++
-title = ""
-date = ""
-author = ""
+title = "Test Content"
+date = "10. April 2020"
+author = "MCL"
 authorTwitter = "" #do not include @
 cover = ""
-tags = ["", ""]
-keywords = ["", ""]
-description = ""
+tags = ["test", ""]
+keywords = ["test", "programming"]
+description = "A test post to see if this works"
 showFullContent = false
 +++
 
