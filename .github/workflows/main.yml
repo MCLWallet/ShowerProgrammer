@@ -35,6 +35,7 @@ jobs:
     # Builds the Hugo Blog
     - name: Build
       run: |
+        brew install hugo
         npm install
         hugo
     
