@@ -1,0 +1,3 @@
+[submodule "shower-programmer/themes/terminal"]
+	path = shower-programmer/themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git
