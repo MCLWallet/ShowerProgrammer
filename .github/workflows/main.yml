@@ -35,6 +35,7 @@ jobs:
     # Builds the Hugo Blog
     - name: Build
       run: |
+        npm install
         hugo
     
     # Deploys to Firebase
