@@ -13,3 +13,4 @@ showFullContent = false
 # Heading
 
 This is the Content
+New Content
